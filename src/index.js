@@ -59,7 +59,9 @@ function init() {
 
   // Set initial target pattern
   setNewTargetPattern();
-
+// Load high score from localStorage
+highScore = parseInt(localStorage.getItem("stackOverflownHighScore")) || 0;
+document.getElementById("high-score").textContent = highScore;
   // Spawn first piece
   spawnPiece();
 
